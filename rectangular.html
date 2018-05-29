@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Area of a Rectangular Room</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style type="text/css">
+        input {
+            font-size: 26px;
+        }
+    </style>
+
+    </head>
+    <body>
+        <div>
+
+        <input id="length" placeholder="What is the length">
+        <br>
+        <br>
+        <input id="inut" placeholder="What is the width">
+        <br>
+        <br>
+        <button id="clicky">Show Results</button>
+        
+        <h1 id="uinput"></h1>
+        <br>
+        <h1 id="area"></h1>
+
+        
+        </div>
+    <script>
+        var length = parseInt($("#length").val());
+
+        var inut = parseInt($("#inut").val());
+        
+        $("#clicky").click(function(){
+
+        $("#uinput").append("You entered dimensions of " + length + " feet by " + inut + " feet.");
+
+        $("#area").append("The area is " + (area(length,inut)) + " square feet and " + meters(area(length,inut)) + " square meters.");
+
+        });
+
+        function area(length,inut){
+            return length * inut;
+        };
+        function meters(area,length,inut){
+            return area * 0.09290304;
+        }
+
+        // console.log(area(length,inut)); 
+    </script>
+
+    </body>   
+</html>
